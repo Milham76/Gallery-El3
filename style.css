@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Body */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #f970fb, #2eefef);
+  background-size: cover;
+  background-position: center;
+  color: #1e293b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container utama */
+.container {
+  background: #ffffff;
+  backdrop-filter: blur(20px);
+  border: 1px solid #ffffff;
+  border-radius: 24px;
+  padding: 2rem;
+  width: 95%;
+  max-width: 550px;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out;
+  box-shadow: 0 80px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Bagian Profil: gambar, nama, bidang, deskripsi */
+.profile {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-img {
+  width: 390px;
+  height: 200px;
+  border-radius: 0%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+
+.desc {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.last {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+/* Daftar Tautan atau Link */
+.link-list {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  padding-right: 6px;
+  margin-top: 1.5rem;
+}
+
+.link-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.link-list::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 10px;
+}
+
+.link-item {
+  background-color: #e0f2fe;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.link-item-wa {
+  background-color: #06ff23;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: center;
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.link-item i {
+  font-size: 1.2rem;
+}
+
+.link-item:hover {
+  background-color: #3b82f6;
+  color: #f8fafc;
+  transform: translateY(-2px);
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsif untuk Perangkat Mobile */
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    padding: 1.5rem 1rem;
+  }
+
+  .profile-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .name {
+    font-size: 1.4rem;
+  }
+
+  .field {
+    font-size: 0.9rem;
+  }
+
+  .desc {
+    font-size: 0.85rem;
+  }
+
+  .link-list {
+    margin-top: 1rem;
+    max-height: 50vh;
+  }
+}
